@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>📁 docpilot – Supervision documentaire IA</title>
+<style>
+  /* Reset et base */
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0; padding: 0;
+    background: #f9f9f9;
+  }
+  header {
+    padding: 1rem;
+    background: #2c3e50;
+    color: white;
+    text-align: center;
+  }
+
+  /* Barre d'onglets horizontale */
+  nav {
+    background: #34495e;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+  }
+  ul.nav-onglets {
+    list-style: none;
+    margin: 0; padding: 0;
+    display: flex;
+    justify-content: center;
+  }
+  ul.nav-onglets li {
+    margin: 0;
+  }
+  ul.nav-onglets li a {
+    display: block;
+    padding: 1rem 1.5rem;
+    color: #ecf0f1;
+    text-decoration: none;
+    font-weight: 600;
+    border-bottom: 3px solid transparent;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+  }
+  ul.nav-onglets li a:hover {
+    background-color: #3d566e;
+  }
+  ul.nav-onglets li a.active {
+    background-color: #1abc9c;
+    color: #fff;
+    border-bottom-color: #16a085;
+  }
+
+  main {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+  }
+
+  footer {
+    text-align: center;
+    color: #999;
+    font-size: 0.9rem;
+    margin: 3rem 0 1rem;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>📁 docpilot – Supervision documentaire IA</h1>
+</header>
+
+<nav>
+  <ul class="nav-onglets">
+    <li><a href="preparation.html" class="nav-link" id="onglet-preparation">🧱 1. Préparation</a></li>
+    <li><a href="initialisation.html" class="nav-link" id="onglet-initialisation">🚀 2. Initialisation projet</a></li>
+    <li><a href="interaction-ia-d.html" class="nav-link" id="onglet-interaction-ia-d">🤖 3. Interaction IA-D</a></li>
+    <li><a href="supervision-ia-s.html" class="nav-link" id="onglet-supervision-ia-s">🧠 4. Supervision IA-S</a></li>
+    <li><a href="refonte-documentaire.html" class="nav-link" id="onglet-refonte-documentaire">🧾 5. Refonte documentaire</a></li>
+    <li><a href="aide-transversale.html" class="nav-link" id="onglet-aide-transversale">📚 6. Aide transversale</a></li>
+  </ul>
+</nav>
+
+<main id="contenu-principal" tabindex="0">
+  <h2>Page de contenu</h2>
+  <p>Le contenu spécifique à chaque page viendra ici.</p>
+</main>
+
+<footer>
+  <p>docpilot © 2025 – Interface locale autonome – Aucune API externe</p>
+</footer>
+
+<script>
+  // Script pour marquer l'onglet actif selon URL
+  document.addEventListener('DOMContentLoaded', () => {
+    const path = window.location.pathname.split('/').pop();
+    const onglets = document.querySelectorAll('ul.nav-onglets a.nav-link');
+    onglets.forEach(link => {
+      if (link.getAttribute('href') === path) {
+        link.classList.add('active');
+      } else {
+        link.classList.remove('active');
+      }
+    });
+  });
+</script>
+
+</body>
+</html>

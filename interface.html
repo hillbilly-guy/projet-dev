@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>docpilot – Interface de supervision IA</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <header>
+    <h1>📁 docpilot – Supervision documentaire IA</h1>
+    <nav class="tab-nav" role="tablist" aria-label="Navigation par étapes">
+      <button role="tab" aria-selected="true" aria-controls="cdc" data-tab="cdc">📘 CDC</button>
+      <button role="tab" aria-selected="false" aria-controls="checklist" data-tab="checklist">✅ Checklist</button>
+      <button role="tab" aria-selected="false" aria-controls="instructions" data-tab="instructions">🧭 Instructions</button>
+      <button role="tab" aria-selected="false" aria-controls="audit" data-tab="audit">🔍 Audit</button>
+      <button role="tab" aria-selected="false" aria-controls="pilotage" data-tab="pilotage">📝 Pilotage</button>
+      <button role="tab" aria-selected="false" aria-controls="initialisation" data-tab="initialisation">⚙️ Initialisation</button>
+      <button role="tab" aria-selected="false" aria-controls="aide" data-tab="aide">❓ Aide</button>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Onglets = âges du cycle docpilot -->
+
+    <section id="cdc" class="tab-content" role="tabpanel">
+      <h2>📘 Cahier des Charges</h2>
+      <pre id="cdcContent">Chargement du cdc_initial.md…</pre>
+      <button onclick="copyContent('cdcContent')">📋 Copier</button>
+    </section>
+
+    <section id="checklist" class="tab-content" hidden role="tabpanel">
+      <h2>✅ Checklist</h2>
+      <pre id="checklistContent">Chargement de checklist.md…</pre>
+      <button onclick="copyContent('checklistContent')">📋 Copier</button>
+    </section>
+
+    <section id="instructions" class="tab-content" hidden role="tabpanel">
+      <h2>🧭 Instructions IA-D</h2>
+      <textarea id="instructionsEditor" rows="12" cols="100" placeholder="Instructions dynamiques…"></textarea><br>
+      <button onclick="saveFile('instructions.yaml', 'instructionsEditor')">💾 Sauvegarder</button>
+      <button onclick="copyContent('instructionsEditor')">📋 Copier</button>
+    </section>
+
+    <section id="audit" class="tab-content" hidden role="tabpanel">
+      <h2>🔍 Zone Audit IA-S</h2>
+      <textarea id="auditEditor" rows="12" cols="100" placeholder="Retour IA-S ici…"></textarea><br>
+      <button onclick="saveFile('audit.log', 'auditEditor')">💾 Sauvegarder</button>
+      <button onclick="copyContent('auditEditor')">📋 Copier</button>
+    </section>
+
+    <section id="pilotage" class="tab-content" hidden role="tabpanel">
+      <h2>📝 Journal de Pilotage</h2>
+      <textarea id="pilotageEditor" rows="12" cols="100" placeholder="Contenu du pilotage.md…"></textarea><br>
+      <button onclick="saveFile('pilotage.md', 'pilotageEditor')">💾 Sauvegarder</button>
+      <button onclick="copyContent('pilotageEditor')">📋 Copier</button>
+    </section>
+
+    <section id="initialisation" class="tab-content" hidden role="tabpanel">
+      <h2>⚙️ Initialisation du Projet</h2>
+      <p>Copiez-collez les fichiers de configuration dans les IA :</p>
+      <ul>
+        <li><code>ia-superviseuse.yaml</code></li>
+        <li><code>ia-f.yaml</code></li>
+      </ul>
+      <p>Assurez-vous que le nom de projet est bien défini dans <code>meta.yaml</code>.</p>
+    </section>
+
+    <section id="aide" class="tab-content" hidden role="tabpanel">
+      <h2>❓ Aide à l’utilisation</h2>
+      <p>Consultez chaque section dans l’ordre pour préparer, initialiser et piloter votre projet avec IA-D / IA-S.</p>
+      <p>La communication avec les IA se fait uniquement par copier-coller. Aucun appel réseau.</p>
+      <p>Voir le fichier <code>cdc_initial.md</code> pour plus de détails.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>docpilot © 2025 – Interface locale autonome – Aucune API externe</p>
+  </footer>
+
+  <script src="assets/js/script.js"></script>
+</body>
+</html>
