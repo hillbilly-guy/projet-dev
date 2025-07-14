@@ -1,0 +1,57 @@
+[
+  {
+    "id": "cmd_20250713_001",
+    "type": "#LANCER_AUDIT",
+    "contexte": "cdc_initial.md",
+    "contenu": "#LANCER_AUDIT",
+    "date": "2025-07-13T09:00:00Z",
+    "auteur": "IA-D",
+    "statut": "en_attente",
+    "tags": ["audit", "pilotage"],
+    "commentaire": "Audit demandé sur le CDC initial chargé à l’instant."
+  },
+  {
+    "id": "cmd_20250713_002",
+    "type": "#LOAD_CDC",
+    "contexte": "cdc_initial.md",
+    "contenu": "#LOAD_CDC",
+    "date": "2025-07-13T09:05:00Z",
+    "auteur": "IA-D",
+    "statut": "traitée",
+    "tags": ["cdc", "chargement"],
+    "commentaire": "Chargement du CDC initial effectué par IA-D."
+  },
+  {
+    "id": "cmd_20250713_003",
+    "type": "#COMMENTAIRE",
+    "contexte": "audit.md",
+    "contenu": "Résultat de l’audit en cours d’analyse",
+    "date": "2025-07-13T10:15:00Z",
+    "auteur": "IA-S",
+    "statut": "en_attente",
+    "tags": ["audit", "analyse"],
+    "commentaire": "Note ajoutée automatiquement après déclenchement d’audit."
+  },
+  {
+    "id": "cmd_20250713_004",
+    "type": "#LANCER_AUDIT",
+    "contexte": "cdc_complet.md",
+    "contenu": "#LANCER_AUDIT",
+    "date": "2025-07-13T11:30:00Z",
+    "auteur": "HUMAIN",
+    "statut": "en_attente",
+    "tags": ["audit", "révision"],
+    "commentaire": "Nouvelle commande manuelle demandée par l’utilisateur."
+  },
+  {
+    "id": "cmd_20250713_005",
+    "type": "#CHARGER_DIRECTIVES",
+    "contexte": "directives_globales.yaml",
+    "contenu": "#CHARGER_DIRECTIVES",
+    "date": "2025-07-13T11:45:00Z",
+    "auteur": "IA-D",
+    "statut": "traitée",
+    "tags": ["directives", "configuration"],
+    "commentaire": "Directive de configuration globale chargée."
+  }
+]
